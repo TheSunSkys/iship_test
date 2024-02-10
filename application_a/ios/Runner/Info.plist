@@ -47,5 +47,51 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb962023945511502</string>
+			</array>
+		</dict>
+	</array>
+	<key>LSApplicationQueriesSchemes</key>
+		<array>
+			<string>instagram</string>
+			<string>fb</string>
+			<string>fbauth2</string>
+			<string>fbshareextension</string>
+			<string>fbapi</string>
+			<string>facebook-reels</string>
+			<string>facebook-stories</string>
+			<string>fb-messenger-share-api</string>
+			<string>fb-messenger</string>
+			<string>tg</string>
+			<string>whatsapp</string>
+			<string>twitter</string>
+		</array>
+	
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>$(PRODUCT_NAME) needs permission to access photos and videos on your device</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>$(PRODUCT_NAME) does not require access to the microphone.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>$(PRODUCT_NAME) requires access to the camera.</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>$(PRODUCT_NAME) requires access to play music</string>
+	
+	<key>FacebookAppID</key>
+	<string>962023945511502</string>
+	<key>FacebookClientToken</key>
+	<string>1b39661b9256a2b13464d0f02a96ae59</string>
+	<key>FacebookDisplayName</key>
+	<string>iship-testing</string>
+	
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_dartobservatory._tcp</string>
+	</array>
 </dict>
 </plist>
