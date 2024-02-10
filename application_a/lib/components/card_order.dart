@@ -1,6 +1,7 @@
 import 'package:application_a/until/model/mode.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:share_plus/share_plus.dart';
 
 class ComponentsCardOrder extends StatelessWidget {
   const ComponentsCardOrder({
@@ -12,7 +13,6 @@ class ComponentsCardOrder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Container(
       margin: const EdgeInsets.all(10),
       padding: const EdgeInsets.all(10),
@@ -88,7 +88,9 @@ class ComponentsCardOrder extends StatelessWidget {
                   ),
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () async {
+                    Share.shareUri(Uri.parse('https://app-uat.iship.cloud/print/paperang?order=${order.id}'));
+                  },
                   child: Text(
                     'Paperang',
                     style: TextStyle(
