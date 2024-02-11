@@ -9,6 +9,7 @@ import 'package:application_a/until/model/mode.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ComponentsCardOrder extends StatelessWidget {
   const ComponentsCardOrder({
@@ -63,6 +64,15 @@ class ComponentsCardOrder extends StatelessWidget {
         print(response);
       } catch (e) {
         print('shareToFacebook: $e');
+      }
+    }
+
+    Future<void> openUrl({required String track}) async {
+      final Uri _url = Uri.parse('https://iship.co.th/track=$track');
+      if (await canLaunchUrl(_url)) {
+        await launchUrl(_url);
+      } else {
+        print('Could not launch $_url');
       }
     }
 
@@ -133,7 +143,9 @@ class ComponentsCardOrder extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      openUrl(track: order.trackNo.toString());
+                    },
                     child: Text(
                       'แชร์ไป App อื่น',
                       style: TextStyle(
